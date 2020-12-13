@@ -54,6 +54,7 @@ html {
 
 #comment {
   text-align: center;
+  height: 20px;
   border: 1px solid;
   border: none;
   border-radius: 20px;
