@@ -14,11 +14,17 @@ function createList() {
     newElement.appendChild(document.createTextNode(comment.value));
     comment.value = '';
     text.appendChild(newElement).setAttribute('class', 'dText');
+    newElement.addEventListener('click', toggleOn);
 
     let buttonRemove = document.createElement('img');
     buttonRemove.src = './cancel.svg';
     buttonRemove.addEventListener('click', delItem);
     newElement.appendChild(buttonRemove).setAttribute('class', 'imgSVG');
+
+    function toggleOn() {
+      let done = (newElement.style.textDecoration = 'line-through');
+      newElement.classList.toggle('done');
+    }
 
     function delItem() {
       newElement.remove();
