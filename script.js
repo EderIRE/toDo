@@ -22,7 +22,6 @@ function createList() {
     newElement.appendChild(buttonRemove).setAttribute('class', 'imgSVG');
 
     function toggleOn() {
-      let done = (newElement.style.textDecoration = 'line-through');
       newElement.classList.toggle('done');
     }
 
